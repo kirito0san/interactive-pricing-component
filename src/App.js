@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import PageViews from "./components/PageViews";
+import SimpleTraffic from "./components/SimpleTraffic";
+import StartMyTrail from "./components/StartMyTrial";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="flex flex-col items-center text-center font-Manrope App">
+      <SimpleTraffic />
+      <div className="flex w-[90%] md:w-fit flex-col gap-2 bg-white shadow-2xl flex-co rounded-xl ">
+        <PageViews />
+        <hr className="w-full" />
+        <StartMyTrail />
+      </div>
     </div>
   );
 }
